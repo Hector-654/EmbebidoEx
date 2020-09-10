@@ -1,31 +1,22 @@
 //https://www.eclipse.org/paho/clients/js/
 
-function ENDEDIDO_1() {
+function SUMA() {
+	var a,y;
+	a = "1000";
+	b = "4000";
 	
-	message =new Paho.MQTT.Message("L10");
+	message =new Paho.MQTT.Message("S"+" "+ a+ " " + b);
 	message.destinationName = "654hector1@gmail.com/kop";
 	client.send(message);
   
 }
-function ENDEDIDO_2(){	
-	
-	message =new Paho.MQTT.Message("L1N");
+function RESTA(){
+	var a,y;
+	a = "1000";
+	b = "4000";
+	message =new Paho.MQTT.Message("R"+" "+ a+" " + b);
 	message.destinationName = "654hector1@gmail.com/kop";
 	client.send(message);
-}
-function ENDEDIDO_1_1() {
-	
-	message =new Paho.MQTT.Message("L2O");
-	message.destinationName = "654hector1@gmail.com/kop";
-	client.send(message);
-  
-}
-function ENDEDIDO_2_2() {
-	
-	message =new Paho.MQTT.Message("L2N");
-	message.destinationName = "654hector1@gmail.com/kop";
-	client.send(message);
-  
 }
 
 
@@ -80,8 +71,7 @@ function ENDEDIDO_2_2() {
 	//console.log("mensaje del sensor:"+message.payloadString);
 	text=(message.payloadString);
 	 console.log(text)
-	 document.getElementById("respuesta").innerHTML = text;
-	 document.getElementById("respuesta2").innerHTML = text;
+	 document.getElementById("n1").innerHTML = text;
 	
 
   
